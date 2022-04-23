@@ -46,6 +46,7 @@ return packer.startup(function(use)
 
   -- Colorschemes
   use "rebelot/kanagawa.nvim"
+  use "morhetz/gruvbox"
 
   -- Completion
   use "hrsh7th/nvim-cmp"
