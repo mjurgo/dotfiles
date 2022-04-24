@@ -20,6 +20,7 @@ keymap("n", "<leader>e", ":Lex 30<cr>", opts)
 -- Navigate buffers
 keymap("n", "<S-l>", ":bnext<cr>", opts)
 keymap("n", "<S-h>", ":bprevious<cr>", opts)
+keymap("n", "<leader>c", ":bd<cr>", opts)
 
 -- VISUAL MODE --
 -- Stay in indent mode

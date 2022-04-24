@@ -6,5 +6,6 @@ require "user.lsp"
 require "user.telescope"
 require "user.treesitter"
 require "user.nvim-tree"
+require "user.bufferline"
 
 vim.cmd "colorscheme kanagawa"
