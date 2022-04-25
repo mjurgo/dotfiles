@@ -5,6 +5,7 @@ local options = {
   number = true,         	-- set numbered lines
   relativenumber = true, 	-- set relative line numbers
   termguicolors = true,   -- set term gui colors
+  splitright = true,      -- forces vertical splits to go right
 }
 
 for k, v in pairs(options) do
