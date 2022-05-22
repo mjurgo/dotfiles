@@ -61,6 +61,8 @@ return packer.startup(function(use)
     requires = { "kyazdani42/nvim-web-devicons", opt = true }
   }
 
+  use "kyazdani42/nvim-tree.lua"
+
   -- Colorschemes
   use "rebelot/kanagawa.nvim"
 
