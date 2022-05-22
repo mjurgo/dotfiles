@@ -11,19 +11,22 @@ for _, sign in ipairs(signs) do
   vim.fn.sign_define(sign.name, { texthl = sign.name, text = sign.text, numhl = "" })
 end
 
-local servers = { "gopls" }
+local opts = { noremap = true, silent = true }
+
+local on_attach = function(client, bufnr)
+  vim.api.nvim_buf_set_keymap(bufnr, "n", "<space>s", "<cmd>lua vim.lsp.buf.formatting()<CR>", opts)
+end
+
+local servers = { "gopls", "sumneko_lua" }
 
 local capabilities = require('cmp_nvim_lsp').update_capabilities(vim.lsp.protocol.make_client_capabilities())
 
 for _, lsp in pairs(servers) do
-  require("lspconfig").lsp.setup {
-    
+  require("lspconfig")[lsp].setup {
+    on_attach = on_attach,
+    signs = {
+      active = signs,
+    },
+    capabilities = capabilities,
   }
 end
-
-require("lspconfig").gopls.setup {
-  signs = {
-    active = signs,
-  },
-  capabilities = capabilities,
-}
