@@ -23,13 +23,12 @@ vim.cmd [[
   augroup end
 ]]
 
--- Use a protected call so we don't error out on first use
 local status_ok, packer = pcall(require, "packer")
 if not status_ok then
   return
 end
 
--- Have packer use a popup window
+-- Packer will use popup window
 packer.init {
   display = {
     open_fn = function()
@@ -39,19 +38,11 @@ packer.init {
 }
 
 return packer.startup(function(use)
-  -- Plugins here
-  use "wbthomason/packer.nvim" -- Have packer manage itself
-  use "nvim-lua/popup.nvim" -- An implementation of the Popup API from vim in Neovim
-  use "nvim-lua/plenary.nvim" -- Useful lua functions used ny lots of plugins
-  use "kyazdani42/nvim-tree.lua"
-  use "kyazdani42/nvim-web-devicons"
-  use "akinsho/bufferline.nvim"
+  -- Plugins
+  use "wbthomason/packer.nvim"
+  use "neovim/nvim-lspconfig"
+  use "williamboman/nvim-lsp-installer"
 
-  -- Colorschemes
-  use "rebelot/kanagawa.nvim"
-  use "morhetz/gruvbox"
-
-  -- Completion
   use "hrsh7th/nvim-cmp"
   use "hrsh7th/cmp-buffer"
   use "hrsh7th/cmp-path"
@@ -59,23 +50,15 @@ return packer.startup(function(use)
   use "hrsh7th/cmp-nvim-lsp"
   use "saadparwaiz1/cmp_luasnip"
   use "L3MON4D3/LuaSnip"
-  use "rafamadriz/friendly-snippets"
 
-  -- LSP
-  use "neovim/nvim-lspconfig"
-  use "williamboman/nvim-lsp-installer"
-
-  -- Telescope
-  use "nvim-telescope/telescope.nvim"
-
-  -- Treesitter
   use {
     "nvim-treesitter/nvim-treesitter",
     run = ":TSUpdate",
   }
 
-  -- Automatically set up your configuration after cloning packer.nvim
-  -- Put this at the end after all plugins
+  -- Colorschemes
+  use "rebelot/kanagawa.nvim"
+
   if PACKER_BOOTSTRAP then
     require("packer").sync()
   end
