@@ -17,7 +17,7 @@ local on_attach = function(client, bufnr)
   vim.api.nvim_buf_set_keymap(bufnr, "n", "<space>s", "<cmd>lua vim.lsp.buf.formatting()<CR>", opts)
 end
 
-local servers = { "gopls", "sumneko_lua" }
+local servers = { "gopls", "sumneko_lua", "solargraph" }
 
 local capabilities = require('cmp_nvim_lsp').update_capabilities(vim.lsp.protocol.make_client_capabilities())
 
