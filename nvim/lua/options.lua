@@ -4,7 +4,9 @@ local options = {
   tabstop        = 2,
   number         = true,
   relativenumber = true,
-  splitright     = true
+  splitright     = true,
+  mouse          = "a",
+  cursorline = true,
 }
 
 for k, v in pairs(options) do
