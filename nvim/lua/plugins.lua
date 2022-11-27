@@ -42,6 +42,9 @@ return packer.startup(function(use)
   use "wbthomason/packer.nvim"
   use "neovim/nvim-lspconfig"
   use "williamboman/nvim-lsp-installer"
+  use {
+    "windwp/nvim-autopairs", config = function() require("nvim-autopairs").setup {} end
+  }
 
   use "hrsh7th/nvim-cmp"
   use "hrsh7th/cmp-buffer"
@@ -56,6 +59,8 @@ return packer.startup(function(use)
     run = ":TSUpdate",
   }
 
+  use {"akinsho/bufferline.nvim", tag = "v3.1.0", requires = "kyazdani42/nvim-web-devicons"}
+
   use {
     "nvim-lualine/lualine.nvim",
     requires = { "kyazdani42/nvim-web-devicons", opt = true }
@@ -63,10 +68,14 @@ return packer.startup(function(use)
 
   use "kyazdani42/nvim-tree.lua"
 
+
   use {
-    'nvim-telescope/telescope.nvim',
-    requires = { {'nvim-lua/plenary.nvim'} }
+    "nvim-telescope/telescope.nvim",
+    requires = { { "nvim-lua/plenary.nvim" } }
   }
+
+  use "numToStr/Comment.nvim"
+
   -- Colorschemes
   use "rebelot/kanagawa.nvim"
 

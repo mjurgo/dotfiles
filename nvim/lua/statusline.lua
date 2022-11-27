@@ -16,7 +16,7 @@ statusline.setup {
   sections = {
     lualine_a = { 'mode' },
     lualine_b = { 'branch', 'diff' },
-    lualine_c = { 'buffers' },
+    -- lualine_c = { 'buffers' },
     lualine_x = { 'diagnostics', 'encoding', 'fileformat', 'filetype' },
     lualine_y = {},
     lualine_z = { 'location' }

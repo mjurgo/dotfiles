@@ -8,7 +8,12 @@ nvimtree.setup {
     mappings = {
       list = {
         { key = { "<CR>", "o", "l" }, action = "edit" }
-      }
-    }
-  }
+      },
+    },
+  },
+  actions = {
+    open_file = {
+      quit_on_open = true,
+    },
+  },
 }

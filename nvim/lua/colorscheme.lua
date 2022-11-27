@@ -1,5 +1,5 @@
 require("kanagawa").setup({
-  transparent = true,
+  transparent = false,
 })
 
 vim.cmd("colorscheme kanagawa")

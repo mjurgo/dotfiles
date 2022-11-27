@@ -186,8 +186,8 @@ bar {
 }
 
 # Set background
-# exec --no-startup-id feh --randomize --bg-scale $HOME/Pulpit/bgs/*
-exec --no-startup-id feh --bg-scale $HOME/Pulpit/bgs/zero-two-wallpaper-0168-scaled.jpg
+exec --no-startup-id feh --randomize --bg-scale $HOME/Pulpit/bgs/*
+# exec --no-startup-id feh --bg-scale $HOME/Pulpit/bgs/zero-two-wallpaper-0168-scaled.jpg
 
 # Turn off second monitor
 exec --no-startup-id xrandr --output DP-2 --off
