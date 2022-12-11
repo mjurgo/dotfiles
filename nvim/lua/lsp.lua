@@ -14,7 +14,7 @@ end
 local opts = { noremap = true, silent = true }
 
 local on_attach = function(client, bufnr)
-  vim.api.nvim_buf_set_keymap(bufnr, "n", "<space>s", "<cmd>lua vim.lsp.buf.formatting()<CR>", opts)
+  vim.api.nvim_buf_set_keymap(bufnr, "n", "<space>s", "<cmd>lua vim.lsp.buf.format{ async = true }<CR>", opts)
 end
 
 local servers = { "gopls", "sumneko_lua", "solargraph", "rust_analyzer", "pyright" }

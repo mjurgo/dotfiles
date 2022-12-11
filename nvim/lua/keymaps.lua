@@ -17,11 +17,6 @@ keymap("n", "<leader>e", ":NvimTreeToggle<cr>", opts)
 keymap("n", "<S-l>", ":bnext<cr>", opts)
 keymap("n", "<S-h>", ":bprevious<cr>", opts)
 keymap("n", "<leader>c", ":bd<cr>", opts)
---keymap("n", "<leader>1", ":LualineBuffersJump 1", opts)
---keymap("n", "<leader>2", ":LualineBuffersJump 1", opts)
-for i = 1, 4, 1 do
-  keymap("n", "<leader>" .. i, ":LualineBuffersJump " .. i .. "<CR>", opts)
-end
 
 -- VISUAL MODE
 -- Move text up and down
@@ -36,3 +31,6 @@ keymap("n", "<c-t>", "<cmd>Telescope live_grep<cr>", opts)
 -- Terminal
 keymap("n", "<leader>t", "<cmd>:vsplit term://zsh<CR>", opts)
 keymap("t", "<Esc>", "<C-\\><C-n>", opts)
+
+-- Comment
+keymap("n", "<leader>/", "gcc", opts)

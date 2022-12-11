@@ -75,6 +75,7 @@ return packer.startup(function(use)
   }
 
   use "numToStr/Comment.nvim"
+  use "akinsho/toggleterm.nvim"
 
   -- Colorschemes
   use "rebelot/kanagawa.nvim"
