@@ -8,11 +8,12 @@ local options = {
   splitbelow     = true,
   mouse          = "a",
   cursorline     = true,
-  -- clipboard      = "unnamedplus",
+  clipboard      = "unnamedplus", -- use system keyboard, requires xclip to work
   hlsearch       = true,
   ignorecase     = true,
   smartindent    = true,
   termguicolors  = true,
+  scrolloff      = 6,
 }
 
 for k, v in pairs(options) do
