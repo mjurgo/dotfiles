@@ -1,4 +1,4 @@
-require("nvim-lsp-installer").setup {}
+require("mason").setup()
 
 local signs = {
   { name = "DiagnosticSignError", text = "" },
@@ -17,7 +17,7 @@ local on_attach = function(client, bufnr)
   vim.api.nvim_buf_set_keymap(bufnr, "n", "<space>s", "<cmd>lua vim.lsp.buf.format{ async = true }<CR>", opts)
 end
 
-local servers = { "gopls", "sumneko_lua", "solargraph", "rust_analyzer", "pyright" }
+local servers = { "gopls", "lua_ls", "solargraph", "rust_analyzer", "pyright" }
 
 local capabilities = require('cmp_nvim_lsp').default_capabilities(vim.lsp.protocol.make_client_capabilities())
 

@@ -41,7 +41,7 @@ return packer.startup(function(use)
   -- Plugins
   use "wbthomason/packer.nvim"
   use "neovim/nvim-lspconfig"
-  use "williamboman/nvim-lsp-installer"
+  use "williamboman/mason.nvim" 
   use {
     "windwp/nvim-autopairs", config = function() require("nvim-autopairs").setup {} end
   }

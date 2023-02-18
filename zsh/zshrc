@@ -115,6 +115,17 @@ alias reposrb="cd ~/Pulpit/repos/ruby"
 
 alias vim="nvim"
 
+# DOCKER Aliases
+alias dps="docker ps"
+alias dxit="docker exec -it"
+alias dcstart="docker compose start"
+alias dcstop="docker compose stop"
+alias dcup="docker compose up"
+alias dcupb="docker compose up --build"
+alias dcupd="docker compose up -d"
+alias dcdn="docker compose down"
+alias dcr="docker compose run --rm"
+
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
@@ -123,3 +134,5 @@ export NVM_DIR="$HOME/.nvm"
 export PATH="$HOME/.rbenv/bin:$PATH"
 eval "$(rbenv init - zsh)"
 
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
