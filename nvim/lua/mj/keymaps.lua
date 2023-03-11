@@ -26,6 +26,10 @@ keymap("n", "<A-k>", ":move .-2<CR>==", opts)
 keymap("n", "k", "v:count == 0 ? 'gk' : 'k'", { expr = true })
 keymap("n", "j", "v:count == 0 ? 'gj' : 'j'", { expr = true })
 
+-- Resize vertically
+keymap("n", "<A-d>", ":vertical resize +5<CR>", opts)
+keymap("n", "<A-a>", ":vertical resize -5<CR>", opts)
+
 -- VISUAL MODE
 --
 -- Stay in indent mode
@@ -51,8 +55,11 @@ keymap("i", ";;", "<Esc>A;", opts)
 keymap("i", ",,", "<Esc>A,", opts)
 
 -- Move lines up and down
-keymap('i', "<A-j>", "<Esc>:move .+1<CR>==gi", opts)
+keymap("i", "<A-j>", "<Esc>:move .+1<CR>==gi", opts)
 keymap("i", "<A-k>", "<Esc>:move .-2<CR>==gi", opts)
+
+-- MULTIPLE MODES
+--
 
 -- PLUGINS KEYMAPS
 --
@@ -63,10 +70,6 @@ keymap("n", "<leader>e", ":NvimTreeToggle<cr>", opts)
 keymap("n", "<leader>ff", "<cmd>lua require'telescope.builtin'.find_files()<cr>", opts)
 keymap("n", "<leader>fg", "<cmd>lua require'telescope.builtin'.live_grep()<cr>", opts)
 keymap("n", "<c-t>", "<cmd>Telescope live_grep<cr>", opts)
-
--- Terminal
-keymap("n", "<leader>t", "<cmd>:vsplit term://zsh<CR>", opts)
-keymap("t", "<Esc>", "<C-\\><C-n>", opts)
 
 -- Comment
 keymap("n", "<leader>/", "gcc", opts)
