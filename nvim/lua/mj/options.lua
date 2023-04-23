@@ -14,6 +14,7 @@ local options = {
   smartindent    = true,
   termguicolors  = true,
   scrolloff      = 6,
+  signcolumn     = "yes:1",
 }
 
 for k, v in pairs(options) do
