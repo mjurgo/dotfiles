@@ -18,7 +18,7 @@ keymap("n", "<C-k>", "<C-w>k", opts)
 -- Buffer navigation
 keymap("n", "<S-l>", ":bnext<cr>", opts)
 keymap("n", "<S-h>", ":bprevious<cr>", opts)
-keymap("n", "<leader>c", ":bd<cr>", opts)
+keymap("n", "<leader>q", ":bd<cr>", opts)
 
 -- Move lines up and down
 keymap("n", "<A-j>", ":move .+1<CR>==", opts)
@@ -52,6 +52,11 @@ keymap("v", "<A-k>", ":move '<-2<CR>gv=gv", opts)
 
 -- INSERT MODE
 --
+-- Move using ctrl and hjkl
+keymap("i", "<C-k>", "<C-o>gk", opts)
+keymap("i", "<C-j>", "<C-o>gj", opts)
+keymap("i", "<C-l>", "<Right>", opts)
+keymap("i", "<C-h>", "<Left>", opts)
 -- Quickly insert ; or , at end of line
 keymap("i", ";;", "<Esc>A;", opts)
 keymap("i", ",,", "<Esc>A,", opts)

@@ -103,16 +103,10 @@ export EDITOR='nvim'
 
 export PATH=$HOME/.local/bin/:$PATH
 export PATH=$PATH:/usr/local/go/bin
-export PATH=$PATH:$HOME/.config/composer/vendor/bin
+export PATH=$PATH:$HOME/repos/odin-lang
 
 
-alias repos="cd ~/Pulpit/repos"
-alias reposc="cd ~/Pulpit/repos/c"
-alias reposcpp="cd ~/Pulpit/repos/cpp"
-alias reposgo="cd ~/Pulpit/repos/go"
-alias reposphp="cd ~/Pulpit/repos/php"
-alias reposrs="cd ~/Pulpit/repos/rust"
-alias reposrb="cd ~/Pulpit/repos/ruby"
+alias repos="cd ~/repos"
 
 alias vim="nvim"
 
@@ -131,9 +125,5 @@ alias dcr="docker compose run --rm"
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
-
-export PATH="$HOME/.rbenv/bin:$PATH"
-eval "$(rbenv init - zsh)"
-
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
