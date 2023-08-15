@@ -1,5 +1,9 @@
 require("kanagawa").setup({
-  transparent = false,
+    transparent = false,
 })
 
-vim.cmd("colorscheme kanagawa")
+require("ayu").setup({
+
+})
+
+vim.cmd("colorscheme ayu")

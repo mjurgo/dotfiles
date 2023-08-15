@@ -192,8 +192,13 @@ exec --no-startup-id feh --randomize --bg-scale $HOME/Obrazy/bgs/*
 # Turn off second monitor
 exec --no-startup-id xrandr --output DisplayPort-1 --off
 
+# Set default audio output device (1 - speakers, 5 - headphones)
+bindsym mod4+1 exec "pactl set-default-sink 1"
+bindsym mod4+2 exec "pactl set-default-sink 5"
+
+
 # Mute/unmute speakers
-bindsym mod4+1 exec "amixer -c 1 set Front 0%"
-bindsym mod4+2 exec "amixer -c 1 set Front 100%"
-bindsym mod4+3 exec "amixer -c 1 set Headphone 0%"
-bindsym mod4+4 exec "amixer -c 1 set Headphone 100%"
+# bindsym mod4+1 exec "amixer -c 1 set Front 0%"
+# bindsym mod4+2 exec "amixer -c 1 set Front 100%"
+# bindsym mod4+3 exec "amixer -c 1 set Headphone 0%"
+# bindsym mod4+4 exec "amixer -c 1 set Headphone 100%"
