@@ -6,4 +6,4 @@ require("ayu").setup({
 
 })
 
-vim.cmd("colorscheme ayu")
+vim.cmd("colorscheme kanagawa-dragon")

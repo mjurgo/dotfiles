@@ -59,14 +59,14 @@ return packer.startup(function(use)
         run = ":TSUpdate",
     }
 
-    use { "akinsho/bufferline.nvim", tag = "v4.1.0", requires = "kyazdani42/nvim-web-devicons" }
+    use { "akinsho/bufferline.nvim", tag = "v4.1.0", requires = "nvim-tree/nvim-web-devicons" }
 
     use {
         "nvim-lualine/lualine.nvim",
-        requires = { "kyazdani42/nvim-web-devicons", opt = true }
+        requires = { "nvim-tree/nvim-web-devicons", opt = true }
     }
 
-    use "kyazdani42/nvim-tree.lua"
+    use "nvim-tree/nvim-tree.lua"
 
 
     use {

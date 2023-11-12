@@ -45,7 +45,7 @@ bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOU
 floating_modifier $mod
 
 # start a terminal
-bindsym $mod+Return exec kitty
+bindsym $mod+Return exec wezterm
 
 # kill focused window
 bindsym $mod+Shift+q kill
@@ -192,9 +192,9 @@ exec --no-startup-id feh --randomize --bg-scale $HOME/Obrazy/bgs/*
 # Turn off second monitor
 exec --no-startup-id xrandr --output DisplayPort-1 --off
 
-# Set default audio output device (1 - speakers, 5 - headphones)
+# Set default audio output device (2 - speakers, 0 - headphones)
 bindsym mod4+1 exec "pactl set-default-sink 1"
-bindsym mod4+2 exec "pactl set-default-sink 5"
+bindsym mod4+2 exec "pactl set-default-sink 3"
 
 
 # Mute/unmute speakers

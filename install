@@ -9,8 +9,11 @@ ln -s ${BASEDIR}/nvim $HOME/.config/nvim
 # i3
 ln -s ${BASEDIR}/i3 $HOME/.config/i3
 # kitty terminal
-rm -rf $HOME/.config/kitty
-ln -s ${BASEDIR}/kitty $HOME/.config/kitty
+# rm -rf $HOME/.config/kitty
+# ln -s ${BASEDIR}/kitty $HOME/.config/kitty
+# wezterm terminal
+rm $HOME/.wezterm.lua
+ln -sf ${BASEDIR}/wezterm/wezterm.lua $HOME/.wezterm.lua
 # tmux
 rm -rf $HOME/.tmux.conf
 ln -s ${BASEDIR}/tmux/tmux.conf $HOME/.tmux.conf
