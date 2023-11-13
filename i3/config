@@ -193,8 +193,8 @@ exec --no-startup-id feh --randomize --bg-scale $HOME/Obrazy/bgs/*
 exec --no-startup-id xrandr --output DisplayPort-1 --off
 
 # Set default audio output device (2 - speakers, 0 - headphones)
-bindsym mod4+1 exec "pactl set-default-sink 2"
-bindsym mod4+2 exec "pactl set-default-sink 0"
+bindsym mod4+1 exec "pactl set-default-sink alsa_output.pci-0000_2a_00.4.analog-stereo"
+bindsym mod4+2 exec "pactl set-default-sink alsa_output.usb-Logitech_PRO_X_Wireless_Gaming_Headset-00.analog-stereo"
 
 
 # Mute/unmute speakers
