@@ -19,6 +19,7 @@ keymap("n", "<C-k>", "<C-w>k", opts)
 keymap("n", "<S-l>", ":bnext<cr>", opts)
 keymap("n", "<S-h>", ":bprevious<cr>", opts)
 keymap("n", "<leader>q", ":bd<cr>", opts)
+keymap("n", "<leader>e", ":Explore<cr>", opts)
 
 -- Move lines up and down
 keymap("n", "<A-j>", ":move .+1<CR>==", opts)
@@ -70,13 +71,17 @@ keymap("i", "<A-k>", "<Esc>:move .-2<CR>==gi", opts)
 
 -- PLUGINS KEYMAPS
 --
--- NvimTree
-keymap("n", "<leader>e", ":NvimTreeToggle<cr>", opts)
 
 -- Telescope
-keymap("n", "<leader>ff", "<cmd>lua require'telescope.builtin'.find_files()<cr>", opts)
-keymap("n", "<leader>fg", "<cmd>lua require'telescope.builtin'.live_grep()<cr>", opts)
-keymap("n", "<c-t>", "<cmd>Telescope live_grep<cr>", opts)
+keymap("n", "<leader>sf", "<cmd>lua require'telescope.builtin'.find_files()<cr>", opts)
+keymap("n", "<leader>sg", "<cmd>lua require'telescope.builtin'.live_grep()<cr>", opts)
 
+-- Telescope file browser
+vim.api.nvim_set_keymap(
+  "n",
+  "<space>e",
+  ":Telescope file_browser<CR>",
+  { noremap = true }
+)
 -- Comment
 keymap("n", "<leader>/", "gcc", opts)

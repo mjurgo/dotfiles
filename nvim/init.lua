@@ -1,13 +1,22 @@
-require "mj.options"
-require "mj.keymaps"
-require "mj.plugins"
-require "mj.colorscheme"
-require "mj.lsp"
-require "mj.completion"
-require "mj.treesitter"
-require "mj.statusline"
-require "mj.bufferline"
-require "mj.nvimtree"
-require "mj.telescope"
-require "mj.comment"
-require "mj.toggleterm"
+require "options"
+require "keymaps"
+
+local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
+if not vim.loop.fs_stat(lazypath) then
+  vim.fn.system({
+    "git",
+    "clone",
+    "--filter=blob:none",
+    "https://github.com/folke/lazy.nvim.git",
+    "--branch=stable",
+    lazypath,
+  })
+end
+vim.opt.rtp:prepend(lazypath)
+
+local plugins = "plugins"
+
+require("lazy").setup(plugins, opts)
+
+require "lsp"
+require "completion"
