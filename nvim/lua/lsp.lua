@@ -46,6 +46,7 @@ require("lspconfig")["clangd"].setup {
     capabilities = capabilities,
     cmd = {
         "clangd",
-        "--query-driver=/usr/bin/g++-12"
+        "--query-driver=/usr/bin/g++-12",
+        "-header-insertion=never"
     }
 }
