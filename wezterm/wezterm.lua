@@ -11,8 +11,8 @@ config.window_background_image_hsb = {
     brightness = 0.05,
 }
 
-config.font = wezterm.font("EnvyCodeR Nerd Font Mono")
-config.font_size = 13.0
+config.font = wezterm.font("Monocraft")
+config.font_size = 11.0
 
 -- config.hide_tab_bar_if_only_one_tab = true
 
