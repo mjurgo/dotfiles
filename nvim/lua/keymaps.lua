@@ -22,8 +22,8 @@ keymap("n", "<leader>q", ":bd<cr>", opts)
 keymap("n", "<leader>e", ":Explore<cr>", opts)
 
 -- Move lines up and down
-keymap("n", "<A-j>", ":move .+1<CR>==", opts)
-keymap("n", "<A-k>", ":move .-2<CR>==", opts)
+keymap("n", "<C-n>", ":move .+1<CR>==", opts)
+keymap("n", "<C-p>", ":move .-2<CR>==", opts)
 
 -- Move by rows when text is wrapped
 keymap("n", "k", "v:count == 0 ? 'gk' : 'k'", { expr = true })
@@ -33,6 +33,9 @@ keymap("n", "j", "v:count == 0 ? 'gj' : 'j'", { expr = true })
 keymap("n", "<A-d>", ":vertical resize +5<CR>", opts)
 keymap("n", "<A-a>", ":vertical resize -5<CR>", opts)
 
+-- Others
+keymap("n", "<leader>h", ":noh<cr>", opts)
+
 -- VISUAL MODE
 --
 -- Stay in indent mode
@@ -40,8 +43,8 @@ keymap("v", "<", "<gv", opts)
 keymap("v", ">", ">gv", opts)
 
 -- Move text up and down
-keymap("v", "<A-j>", ":m .+1<CR>==", opts)
-keymap("v", "<A-k>", ":m .-2<CR>==", opts)
+keymap("v", "<C-n>", ":m .+1<CR>==", opts)
+keymap("v", "<C-p>", ":m .-2<CR>==", opts)
 keymap("v", "p", '"_dP"', opts)
 
 -- Maintain the cursor position when yanking

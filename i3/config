@@ -195,9 +195,11 @@ exec --no-startup-id xrandr --output DisplayPort-1 --off
 exec --no-startup-id xrandr --output DisplayPort-0 --mode 1920x1080 --rate 144
 
 # Set default audio output device (2 - speakers, 0 - headphones)
-bindsym mod4+1 exec "pactl set-default-sink alsa_output.pci-0000_2a_00.4.analog-stereo"
+bindsym mod4+1 exec "pactl set-default-sink alsa_output.pci-0000_2a_00.4.3.analog-stereo"
 bindsym mod4+2 exec "pactl set-default-sink alsa_output.usb-Logitech_PRO_X_Wireless_Gaming_Headset-00.analog-stereo"
 
+# Set caps lock to work as escape
+exec --no-startup-id setxkbmap -option caps:escape
 
 # Mute/unmute speakers
 # bindsym mod4+1 exec "amixer -c 1 set Front 0%"

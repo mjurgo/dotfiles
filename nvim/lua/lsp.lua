@@ -22,9 +22,7 @@ local on_attach = function(client, bufnr)
     vim.api.nvim_buf_set_keymap(bufnr, "n", "K", "<cmd>lua vim.lsp.buf.hover()<CR>", opts)
 end
 
-local servers = { "docker_compose_language_service", "dockerls", "gopls", "jsonls", "lua_ls", "ols", "pyright",
-    "rust_analyzer", "tsserver",
-    "zls" }
+local servers = { "gopls", "jsonls", "lua_ls", "ols", "pyright", "rust_analyzer" }
 
 local capabilities = require('cmp_nvim_lsp').default_capabilities(vim.lsp.protocol.make_client_capabilities())
 
