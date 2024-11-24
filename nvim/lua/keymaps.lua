@@ -83,7 +83,7 @@ keymap("n", "<leader>sg", "<cmd>lua require'telescope.builtin'.live_grep()<cr>",
 vim.api.nvim_set_keymap(
   "n",
   "<space>e",
-  ":Explore<CR>",
+  ":NvimTreeToggle<CR>",
   { noremap = true }
 )
 -- Comment
