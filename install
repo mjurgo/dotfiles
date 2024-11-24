@@ -12,10 +12,6 @@ ln -s ${BASEDIR}/nvim $HOME/.config/nvim
 ln -s ${BASEDIR}/i3 $HOME/.config/i3
 ln -s ${BASEDIR}/i3status $HOME/.config/i3status
 
-# kitty terminal
-# rm -rf $HOME/.config/kitty
-# ln -s ${BASEDIR}/kitty $HOME/.config/kitty
-#
 # wezterm terminal
 rm $HOME/.wezterm.lua
 ln -sf ${BASEDIR}/wezterm/wezterm.lua $HOME/.wezterm.lua
