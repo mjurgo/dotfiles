@@ -27,16 +27,16 @@ local servers = { "gopls", "jsonls", "lua_ls", "ols", "phpactor", "pyright", "ru
 local capabilities = require('cmp_nvim_lsp').default_capabilities(vim.lsp.protocol.make_client_capabilities())
 
 for _, lsp in pairs(servers) do
-    require("lspconfig")[lsp].setup {
+    vim.lsp.config(lsp, {
         on_attach = on_attach,
         signs = {
             active = signs,
         },
         capabilities = capabilities,
-    }
+    })
 end
 
-require("lspconfig")["clangd"].setup {
+vim.lsp.config("clangd", {
     on_attach = on_attach,
     signs = {
         active = signs,
@@ -47,4 +47,6 @@ require("lspconfig")["clangd"].setup {
         "--query-driver=/usr/bin/g++-12",
         "-header-insertion=never"
     }
-}
+})
+
+vim.lsp.enable(servers, "clangd")
